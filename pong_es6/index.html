@@ -1,0 +1,36 @@
+<!-- demo Ponggame with canvas-->
+<!-- W. van Vliet 19 november 2015 -->
+<!DOCTYPE html>
+<html lang=NL>
+  <head>
+    <title>pOOng</title> <!-- Object Oriented Pong -->
+    <meta charset="utf-8">
+    <link href="css/canvas.css" rel="stylesheet">
+
+    <!-- Loading of classes is tricky! Start with classes without relations
+          Seperate the different classes in files to make it easier to work
+          together. Sandor recognised the advantage at once! I hope you too.
+    -->
+    <script src="jsclasses/position.js"></script>
+    <script src="jsclasses/size.js"></script>
+    <script src="jsclasses/ball.js"></script>
+    <script src="jsclasses/player.js"></script>
+    <script src="jsclasses/playfield.js"></script>
+
+    <script src="jsclasses/main.js"></script> <!-- Always the last to load -->
+  </head>
+  <body onload="main()"> <!-- Kickstart the game once everything is loaded -->
+    <div id="container">
+      <div id="menu">
+        <a href="javascript:startGame();">start</a>
+        <a href="javascript:stopGame();">stop</a>
+      </div> <!-- menudiv -->
+      <div id="canvascontainer">
+       <canvas id="game" width="600" height="400">
+         Hier zou een spel moeten staan, maar als je die niet ziet, dan is je browser te oud!
+       </canvas>
+      </div><!-- canvascontainer-->
+    </div> <!-- container -->
+
+  </body>
+  </html>
